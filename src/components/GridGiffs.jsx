@@ -15,7 +15,7 @@ export default function GridGiffs({top}){
     }
     useEffect(()=>{
         if(!!top)dispatch(trending_giffs(top));
-    },[top])
+    },[top, dispatch])
     return(
         <div className="GridGiffs">
             <CardColumns>
@@ -43,6 +43,7 @@ export default function GridGiffs({top}){
                                     {pag_item +1}
                                 </Pagination.Item>
                             );
+                            return(<div></div>);
                         });
                     })()}
                     {(pag < Math.floor(total/25)) && <Pagination.Ellipsis disabled/>}
