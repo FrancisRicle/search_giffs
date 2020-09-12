@@ -1,7 +1,10 @@
 {
-  "name": "search_giffs",
+  "name": "searchgiffs",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "engines": {
+    "node": "12.11.1"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
