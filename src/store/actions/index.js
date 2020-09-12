@@ -1,5 +1,5 @@
 export const SEARCH_GIFFS = "SEARCH_GIFFS";
-export const TRENDING_GIFFS = "SEARCH_GIFFS";
+export const TRENDING_GIFFS = "TRENDING_GIFFS";
 const API_KEY = process.env.REACT_APP_API_KEY;
 export const search_giffs = (query, pag = 0) =>{
     const offset = 25 * (25 - (25 - pag));

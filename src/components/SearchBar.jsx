@@ -2,12 +2,15 @@ import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {Form, Button} from 'react-bootstrap';
 import {search_giffs} from '../store/actions';
+import {useHistory} from 'react-router-dom';
 export default function SearchBar(){
     const [searchField, setSearchField] = useState("");
+    const history = useHistory();
     const dispatch = useDispatch();
     const search = (e) =>{
         e.preventDefault();
         dispatch(search_giffs(searchField));
+        history.replace("/");
     }
     return(
         <div className="searchBar">

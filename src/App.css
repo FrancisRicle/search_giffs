@@ -4,10 +4,15 @@
   flex-direction:column;
 }
 .searchBar{
-  align-self: center;
+  margin-left: auto;
 }
 .GridGiffs{
   width: 90%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+.GridGiffs .pagination{
   align-self: center;
 }
 .App-logo {
