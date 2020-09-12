@@ -1,13 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Route} from 'react-router-dom';
+import GridGiffs from "./components/GridGiffs";
+import SearchBar from "./components/SearchBar";
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
-  console.log(process.env)
   return (
-    <div>
-        <h1>Commit</h1>
+    <div className="App">
+      <Route exact path="/" component={SearchBar}/>
+      <Route exact path="/" component={GridGiffs}/>
     </div>
   );
 }
-
 export default App;
