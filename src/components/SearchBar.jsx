@@ -10,7 +10,7 @@ export default function SearchBar(){
     const search = (e) =>{
         e.preventDefault();
         dispatch(search_giffs(searchField));
-        history.replace("/");
+        history.replace("/search");
     }
     return(
         <div className="searchBar">

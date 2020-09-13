@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Route path="/" component={NavBar}/>
-      <Route exact path="/" component={GridGiffs}/>
+      <Route exact path="/search" component={GridGiffs}/>
       <Route exact path="/top/:top" render={({match}) => <GridGiffs top={match.params.top}/>}/>
     </div>
   );
