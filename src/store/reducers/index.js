@@ -16,6 +16,9 @@ export default (state, action) =>{
             return{
                 ...state,
                 giffs: action.payload.data,
+                total:null,
+                pag:null,
+                query:null,
             }
         default:
             return state
