@@ -19,7 +19,6 @@ export default function GridGiffs({top}){
     useEffect(()=>{
         if(!giffs) setTimeout(()=>setStatus(<h3>Sin Resultados</h3>),3000);
         else {
-            alert("new giffs")
             setGrid();
             setStatus(Loading)
             setTimeout(()=>setGrid(giffs),3000)
