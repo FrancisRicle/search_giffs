@@ -1,26 +1,37 @@
-import {
-    SEARCH_GIFFS,
-    TRENDING_GIFFS
-} from "../actions";
-export default (state, action) =>{
+import {Actions} from "../actions";
+const initialState = {
+    giffs: []
+};
+export default (state = initialState, action) =>{
     switch(action.type){
-        case SEARCH_GIFFS:
+        case Actions.START_GET_GIFFS:
+            return {
+                ...state,
+                giffs: null,
+            }
+        case Actions.SEARCH_GIFFS:
             return{
                 ...state,
-                giffs: action.payload.search.data,
+                giffs: null,
                 total: action.payload.search.pagination.total_count,
+                limit: action.payload.limit,
                 pag : action.payload.pag,
                 query: action.payload.query
             }
-        case TRENDING_GIFFS:
+        case Actions.TRENDING_GIFFS:
             return{
                 ...state,
-                giffs: action.payload.data,
-                total:null,
-                pag:null,
+                giffs: null,
                 query:null,
             }
+        case Actions.PARSE_GIFFS:
+            return{
+                ...state,
+                giffs: action.payload
+            }
         default:
-            return state
+            return {
+                ...state,
+            }
     }
 }
